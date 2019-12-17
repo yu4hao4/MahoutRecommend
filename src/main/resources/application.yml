@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: utf-8
+    cache: false
+  datasource:
+    url: jdbc:mysql://47.102.36.32:13306/movie?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+#    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  type-aliases-package: com.mapper
+  mapper-locations: classpath:mapping/**/*.xml
+  config-location: classpath:/mybatis-config.xml
